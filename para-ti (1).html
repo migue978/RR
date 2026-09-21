@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title> For you, Robin </title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,500&family=Karla:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  --bg:#14172b; --bg2:#1d2140; --ink:#f3eef7; --soft:#b9b5d0; --rose:#e8a0b4; --gold:#f2d48a;
+  --serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;
+  --sans:"Karla",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme: light){
+  :root:not([data-theme="dark"]){--bg:#fbf3f4;--bg2:#f4e3e8;--ink:#2a2140;--soft:#6d6584;--rose:#c4526f;--gold:#a9781c}
+}
+:root[data-theme="light"]{--bg:#fbf3f4;--bg2:#f4e3e8;--ink:#2a2140;--soft:#6d6584;--rose:#c4526f;--gold:#a9781c}
+:root[data-theme="dark"]{--bg:#14172b;--bg2:#1d2140;--ink:#f3eef7;--soft:#b9b5d0;--rose:#e8a0b4;--gold:#f2d48a}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:1.05rem;line-height:1.7}
+section{max-width:40rem;margin:0 auto;padding:5rem 1.5rem}
+h1,h2{font-family:var(--serif);font-weight:400;line-height:1.1;margin:0}
+.hero{min-height:92vh;display:flex;flex-direction:column;justify-content:center;text-align:center;position:relative;overflow:hidden;max-width:none}
+.hero h1{font-size:clamp(3.4rem,15vw,7rem);font-style:italic;font-weight:500;animation:rise 1.6s ease both}
+.hero p{color:var(--soft);font-family:var(--serif);font-size:1.4rem;margin:1.2rem 0 0;animation:rise 1.6s .5s ease both}
+.star{position:absolute;width:3px;height:3px;border-radius:50%;background:var(--gold);opacity:.7}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.hero h1,.hero p{animation:none}}
+h2{font-size:2.2rem;margin-bottom:1.5rem;font-style:italic}
+.msg p{max-width:34rem;margin:0 0 1.2rem}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(9.5rem,1fr));gap:1.6rem;padding:1rem 0}
+figure{margin:0;background:var(--ink);padding:.6rem .6rem 1.8rem;border-radius:3px;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+figure:nth-child(odd){transform:rotate(-2deg)}
+figure:nth-child(even){transform:rotate(1.8deg)}
+.ph{aspect-ratio:1;background:linear-gradient(135deg,var(--rose),var(--bg2));display:grid;place-items:center;font-size:2rem}
+.ph img{width:100%;height:100%;object-fit:cover;display:block}
+figcaption{font-family:var(--serif);font-style:italic;color:var(--bg);text-align:center;margin-top:.6rem;font-size:1.1rem}
+.poem{background:var(--bg2);max-width:none}
+.poem>div{max-width:34rem;margin:0 auto}
+.poem pre{font-family:var(--serif);font-size:1.45rem;line-height:1.7;white-space:pre-wrap;margin:0;font-style:italic}
+.poem .sig{font-family:var(--sans);font-style:normal;color:var(--soft);font-size:1rem;margin-top:1.5rem}
+.surprise{text-align:center}
+button{font:inherit;cursor:pointer;background:transparent;color:var(--ink);border:1.5px solid var(--rose);border-radius:999px;padding:.8rem 1.8rem}
+button:hover{background:var(--rose);color:var(--bg)}
+button:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+#secret{font-family:var(--serif);font-size:1.8rem;font-style:italic;margin-top:2rem;min-height:5rem;opacity:0;transition:opacity 1.2s}
+#secret.on{opacity:1}
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <h1>For you, Robin &#x1FAC0; 🐙 ✨  </h1>
+  <p> A falta de flores bueno son los escritos.</p>
+</section>
+
+<section class="msg">
+  <h2>por cierto</h2>
+  <p>Quería escribir algo que no se quedara en un mensaje de nuestros chats. Algo que puedas abrir cuando quieras.</p>
+  <p>es muy agradable hablar contigo cada vez que tengo la oportunidad y disfruto cada tema de nuestras conversaciones.</p>
+</section>
+
+<section>
+  <h2>Robintopia</h2>
+  <div class="gallery">
+    <figure><div class="ph"><img src="foto1.jpg" alt="Aquel día"></div><figcaption>Aquel día</figcaption></figure>
+    <figure><div class="ph"><img src="foto2.jpg" alt="Esa noche"></div><figcaption>Esa noche</figcaption></figure>
+    <figure><div class="ph"><img src="foto3.jpg" alt="Nuestro lugar"></div><figcaption>Nuestro lugar</figcaption></figure>
+    <figure><div class="ph"><img src="foto4.jpg" alt="Mi favorita"></div><figcaption>Mi favorita</figcaption></figure>
+  </div>
+</section>
+
+<section class="poem">
+  <div>
+    <h2>Un poema</h2>
+    <pre>Si el mundo se apaga un instante,
+yo te busco en la orilla de tu risa.
+Ahí me quedo, sin mapa ni prisa,
+porque contigo el camino es distante
+y aun así todo queda cerca.
+
+Te elijo en lo simple y en lo diario,
+en la tarde que se vuelve ligera.
+Si me preguntan dónde está mi casa,
+digo tu nombre y sonrío.</pre>
+    <p class="sig">— Con cariño, [Tu nombre]</p>
+  </div>
+</section>
+
+<section class="surprise">
+  <h2>Una última cosa</h2>
+  <button id="btn" type="button">Toca aquí</button>
+  <div id="secret" aria-live="polite">Te quiero. Gracias por ser tú.</div>
+</section>
+
+<script>
+(function(){
+  var h=document.querySelector('.hero');
+  for(var i=0;i<28;i++){
+    var s=document.createElement('span');
+    s.className='star';
+    s.style.left=Math.random()*100+'%';
+    s.style.top=Math.random()*100+'%';
+    s.style.opacity=(0.25+Math.random()*0.6).toFixed(2);
+    h.appendChild(s);
+  }
+  document.getElementById('btn').addEventListener('click',function(){
+    document.getElementById('secret').classList.add('on');
+    this.style.display='none';
+  });
+})();
+</script>
+</body>
+</html>
